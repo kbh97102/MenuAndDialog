@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">TouchTest</string>
+    <string name="red">RED</string>
+    <string name="blue">BLUE</string>
+    <string name="green">GREEN</string>
+    <string name="clear">CLEAR</string>
+    <string name="argb_red">R</string>
+    <string name="argb_blue">B</string>
+    <string name="argb_green">G</string>
+    <string name="argb_alpha">A</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
+    <string name="menuitem_color">Color</string>
+    <string name="menuitem_brush">Brush</string>
+</resources>

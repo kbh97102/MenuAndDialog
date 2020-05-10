@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/selectedBrushTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Selected \nBrush"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/selectedBrushImageView"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <ImageView
+        android:id="@+id/selectedBrushImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/checker_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/selectedBrushTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"
+        android:scaleType="centerInside"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="50dp"
+        android:background="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectedBrushImageView" />
+
+    <TableLayout
+        android:id="@+id/brushTypeSelector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:columnCount="4"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        android:stretchColumns="*"
+        android:padding="20dp"
+        >
+
+        <TableRow>
+
+            <ImageButton
+                android:id="@+id/brush_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:background="@android:color/white"
+                />
+
+            <ImageButton
+                android:id="@+id/brush_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:background="@android:color/white"
+                android:layout_weight="1"/>
+
+            <ImageButton
+                android:id="@+id/brush_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:background="@android:color/white"
+                android:layout_weight="1"/>
+
+            <ImageButton
+                android:id="@+id/brush_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:background="@android:color/white"
+                android:layout_weight="1"/>
+        </TableRow>
+
+        <TableRow>
+            <ImageButton
+                android:id="@+id/brush_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:layout_weight="1"
+                />
+            <ImageButton
+                android:id="@+id/brush_6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                />
+
+            <ImageButton
+                android:id="@+id/brush_7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:layout_weight="1"/>
+
+            <ImageButton
+                android:id="@+id/brush_8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:layout_weight="1"/>
+
+        </TableRow>
+
+
+    </TableLayout>
+
+    <SeekBar
+        android:id="@+id/size"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/brushTypeSelector"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:max="100"
+        android:progress="10"
+        />
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:id="@+id/okButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ok"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/size"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/cancelButton"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:background="@android:color/white"
+        />
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        android:textSize="15sp"
+        app:layout_constraintTop_toBottomOf="@id/size"
+        app:layout_constraintStart_toEndOf="@id/okButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@android:color/white"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
